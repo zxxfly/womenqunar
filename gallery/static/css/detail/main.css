@@ -4444,7 +4444,7 @@ a.popover-list-item-link {
 .quarkCanvas.quark-slideshow .slide .content .list-item-title.empty { display: none }
 .quarkCanvas.quark-slideshow .slide .quark-title-wrap {
     position: absolute;
-    width: 400px;
+    width: 500px;
     height: 100%;
     right: 0;
     padding: 0 120px 0 70px;
