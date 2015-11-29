@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>我们去哪儿</title>
+
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    {#     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">#}
+
+    <link href="/static/css/commonStyle.css" rel="stylesheet">
+    <link href="/static/css/spanUtil.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="/gallery/static/css/main.css" rel="stylesheet">
+
+    <style>
+        .explore {
+            background-color: #1A1A1A;
+            padding-bottom: 25px;
+        }
+
+        @media (max-width: 767px) {
+            .explore {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding: 20px;
+            }
+        }
+
+        #map {
+            position: relative;
+            width: 100%;
+            height: 500px;
+        }
+
+        #map img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #map .labels {
+            position: relative;
+        }
+
+        #map .labels a {
+            position: absolute;
+            color: #BBB;
+            line-height: 18px;
+            border-bottom: 1px solid #BBB;
+        }
+
+        #map .labels a:HOVER {
+            text-decoration: none;
+        }
+
+        .popover a {
+            line-height: 30px;
+        }
+
+        .popover .close {
+            line-height: 18px;
+            opacity: 0.5;
+            -moz-opacity: 0.5;
+            filter: alpha(opacity=50);
+            margin-left: 20px;
+        }
+
+        .dest .thumbnail {
+            height: 100px;
+        }
+
+        .dest .dest-text {
+            padding: 5px;
+        }
+
+        h3.b {
+            color: #EEEEEE;
+        }
+
+        .thumbnail.b {
+            border: 1px solid #444;
+        }
+
+        .thumbnail.b:HOVER {
+            border: 1px solid #555;
+        }
+    </style>
+</head>
+
+
+<body class="b" style="">
+
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" name="home">
+    <div class="container-fluid">
+        <a class="navbar-text brand" href="/gallery/welcome">我们去哪儿</a>
+        <div class="collapse navbar-collapse">
+            <div class="nav navbar-nav navbar-right" style="display: none">
+                <a href="http://www.baidu.com">
+                    <span class="glyphicon glyphicon-menu-right navbar-text" style="color: #9d9d9d"></span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="margin-bottom: 45px;">
+<div class="row">
+    <div class="col-md-9">
+        <h3 class="b">专辑
+            <small></small>
+        </h3>
+    </div>
+    <div class="col-md-3 text-right header-more" style="display: none">
+        <h2>
+            <small>
+                <a class="active" href="http://www.hualvtu.com/explore2.action?did=TOP#anchor">默认</a>
+                <a href="http://www.hualvtu.com/explore2.action?did=QUEUE_HOT_TOP#anchor">热门</a>
+                <a href="http://www.hualvtu.com/explore2.action?did=QUEUE_NEW_TOP#anchor">最新</a>
+            </small>
+        </h2>
+    </div>
+</div>
+<div id="quarks">
+<div class="row row-quark">
+    <div class="col-md-4 quark quark-2-0">
+
+
+        <div class="quark-inner ">
+            <a href="/gallery/detail/1" target="_blank" class="cover quark-link loaded"
+               data-quark-id="10130831161700000231"
+               data-src="/gallery/static/img/2015chengdu/1.jpg"
+               style="overflow: hidden; z-index: 0; background: transparent;">
+
+                <!-- image will be injected here -->
+                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/230326/20130831/1553483f75371de96787.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+            </a>
+            <span class="border-below"></span>
+
+            <div class="quarkText">
+                <div class="quarkTextInner">
+                    <a href="/gallery/detail/1" target="_blank"
+                       class="title2 quark-link" data-quark-id="10130831161700000231">
+                        <span class="title-text">成都•来了</span>
+                    </a>
+
+                    <div class="bylineWrapper">
+                        <div class="byline">
+                            <a href="/gallery/detail/1" class="author" target="_blank">蟹小月</a>
+{#                            <a href="http://www.hualvtu.com/dest/57019" target="_blank">丹布勒</a>&nbsp;&nbsp;#}
+{#                            <a href="http://www.hualvtu.com/poi/57020" target="_blank">丹布勒石窟</a>#}
+                        </div>
+                        <div class="date">2015-01-01</div>
+{#                        <div class="view-count">·&nbsp;60个回应&nbsp;·&nbsp;53371次浏览</div>#}
+                    </div>
+                </div>
+            </div>
+            <div class="quarkButtons">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 quark quark-2-1">
+
+
+        <div class="quark-inner ">
+            <a href="/gallery/detail/2" target="_blank" class="cover quark-link loaded"
+               data-quark-id="10130831234000000343"
+               data-src="/gallery/static/img/2015beihai/1.jpg"
+               style="overflow: hidden; z-index: 0; background: transparent;">
+
+                <!-- image will be injected here -->
+                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/110844/20130831/2342cabf3971fa8f0e1b.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+            </a>
+            <span class="border-below"></span>
+
+            <div class="quarkText">
+                <div class="quarkTextInner">
+                    <a href="/gallery/detail/2" target="_blank" class="title2 quark-link"
+                       data-quark-id="10130831234000000343">
+                        <span class="title-text">北海涠洲•那生猛的海鲜，那静谧的小岛</span>
+                    </a>
+
+                    <div class="bylineWrapper">
+                        <div class="byline">
+                            <a href="/gallery/detail/2" class="author" target="_blank">蟹小月</a>
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/55488" target="_blank">巴塞罗那</a>#}
+                        </div>
+                        <div class="date">2015-02-21</div>
+{#                        <div class="view-count">·&nbsp;43个回应&nbsp;·&nbsp;44622次浏览</div>#}
+                    </div>
+                </div>
+            </div>
+            <div class="quarkButtons">
+            </div>
+        </div>
+    </div>
+    <span class="ln ln-2"></span>
+</div>
+<div class="row row-quark">
+    <div class="col-md-6 quark quark-3-0">
+
+
+        <div class="quark-inner ">
+            <a href="/gallery/detail/3" target="_blank" class="cover quark-link loaded"
+               data-quark-id="10130814040100000262"
+               data-src="/gallery/static/img/2015pingyao/1.jpg"
+               style="overflow: hidden; z-index: 0; background: transparent;">
+
+                <!-- image will be injected here -->
+                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/260759/20130814/0354295c81588aaf062c.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+            </a>
+            <span class="border-below"></span>
+
+            <div class="quarkText">
+                <div class="quarkTextInner">
+                    <a href="/gallery/detail/3" target="_blank" class="title2 quark-link"
+                       data-quark-id="10130814040100000262">
+                        <span class="title-text">平遥•摇啊摇</span>
+                    </a>
+
+                    <div class="bylineWrapper">
+                        <div class="byline">
+                            <a href="/gallery/detail/3" class="author" target="_blank">蟹小月</a>
+                            &nbsp;
+{#                            <a href="http://www.hualvtu.com/dest/57920" target="_blank">多伦多</a>&nbsp;·&nbsp;<a#}
+{#                                href="http://www.hualvtu.com/poi/58001" target="_blank">High Park</a>#}
+                        </div>
+                        <div class="date">2015-03-27</div>
+{#                        <div class="view-count">·&nbsp;25个回应&nbsp;·&nbsp;45305次浏览</div>#}
+                    </div>
+                </div>
+            </div>
+            <div class="quarkButtons">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 quark quark-3-2">
+
+
+        <div class="quark-inner ">
+            <a href="/gallery/detail/5" target="_blank" class="cover quark-link loaded"
+               data-quark-id="10131105001000000439"
+               data-src="/gallery/static/img/2015fuzhou/1.jpg"
+               style="overflow: hidden; z-index: 0; background: transparent;">
+
+                <!-- image will be injected here -->
+                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/91842/20131105/000520162d79c7d7a3a5.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+            </a>
+            <span class="border-below"></span>
+
+            <div class="quarkText">
+                <div class="quarkTextInner">
+                    <a href="/gallery/detail/5" target="_blank" class="title2 quark-link"
+                       data-quark-id="10131105001000000439">
+                        <span class="title-text">福州平潭•月光光照地堂,虾仔你乖乖训落床</span>
+                    </a>
+
+                    <div class="bylineWrapper">
+                        <div class="byline">
+                            <a href="/gallery/detail/5" class="author" target="_blank">蟹小月</a>
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/10959" target="_blank">九寨沟-黄龙</a>#}
+                        </div>
+                        <div class="date">2015-05-31</div>
+{#                        <div class="view-count">·&nbsp;28个回应&nbsp;·&nbsp;29139次浏览</div>#}
+                    </div>
+                </div>
+            </div>
+            <div class="quarkButtons">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 quark quark-3-1">
+
+
+        <div class="quark-inner ">
+            <a href="/gallery/detail/4" target="_blank" class="cover quark-link loaded"
+               data-quark-id="10130812155500000467"
+               data-src="/gallery/static/img/2015nanjing/1.jpg"
+               style="overflow: hidden; z-index: 0; background: transparent;">
+
+                <!-- image will be injected here -->
+                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/255607/20130812/15408c89ebc6c93a62b2.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+            </a>
+            <span class="border-below"></span>
+
+            <div class="quarkText">
+                <div class="quarkTextInner">
+                    <a href="/gallery/detail/4" target="_blank" class="title2 quark-link"
+                       data-quark-id="10130812155500000467">
+                        <span class="title-text">南京•厚重的繁华</span>
+                    </a>
+
+                    <div class="bylineWrapper">
+                        <div class="byline">
+                            <a href="/gallery/detail/4" class="author" target="_blank">蟹小月</a>
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/25659" target="_blank">台中</a>#}
+                        </div>
+                        <div class="date">2015-04-24</div>
+{#                        <div class="view-count">·&nbsp;17个回应&nbsp;·&nbsp;35902次浏览</div>#}
+                    </div>
+                </div>
+            </div>
+            <div class="quarkButtons">
+            </div>
+        </div>
+    </div>
+    <span class="ln ln-3"></span>
+</div>
+<div class="row row-quark">
+    <div class="col-md-6 quark quark-4-0">
+
+
+        <div class="quark-inner ">
+            <a href="/gallery/detail/6" target="_blank" class="cover quark-link loaded"
+               data-quark-id="10130815154900001090"
+               data-src="/gallery/static/img/2015chengducaomei/1.jpg"
+               style="overflow: hidden; z-index: 0; background: transparent;">
+
+                <!-- image will be injected here -->
+                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/256548/20130815/15483396853699895799.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+            </a>
+            <span class="border-below"></span>
+
+            <div class="quarkText">
+                <div class="quarkTextInner">
+                    <a href="/gallery/detail/6" target="_blank" class="title2 quark-link"
+                       data-quark-id="10130815154900001090">
+                        <span class="title-text">成都草莓•再一片摇滚</span>
+                    </a>
+
+                    <div class="bylineWrapper">
+                        <div class="byline">
+                            <a href="/gallery/detail/6" class="author" target="_blank">蟹小月</a>
+                            &nbsp;
+{#                            <a href="http://www.hualvtu.com/dest/20995" target="_blank">日喀则</a>&nbsp;·&nbsp;<a#}
+{#                                href="http://www.hualvtu.com/poi/21059" target="_blank">樟木口岸</a>#}
+                        </div>
+                        <div class="date">2015-06-13</div>
+{#                        <div class="view-count">·&nbsp;27个回应&nbsp;·&nbsp;30239次浏览</div>#}
+                    </div>
+                </div>
+            </div>
+            <div class="quarkButtons">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 quark quark-4-2">
+
+
+        <div class="quark-inner ">
+            <a href="/gallery/detail/8" target="_blank" class="cover quark-link loaded"
+               data-quark-id="10131013220700000470"
+               data-src="/gallery/static/img/2015xinduqiao/1.jpg"
+               style="overflow: hidden; z-index: 0; background: transparent;">
+
+                <!-- image will be injected here -->
+                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/125720/20131013/205322bc8e4974c2f1c2.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+            </a>
+            <span class="border-below"></span>
+
+            <div class="quarkText">
+                <div class="quarkTextInner">
+                    <a href="/gallery/detail/8" target="_blank" class="title2 quark-link"
+                       data-quark-id="10131013220700000470">
+                        <span class="title-text">新都桥·熙熙川西</span>
+                    </a>
+
+                    <div class="bylineWrapper">
+                        <div class="byline">
+                            <a href="/gallery/detail/8" class="author" target="_blank">蟹小月</a>
+                            &nbsp;
+{#                            <a href="http://www.hualvtu.com/dest/13108" target="_blank">阿坝州</a>&nbsp;·&nbsp;<a#}
+{#                                href="http://www.hualvtu.com/poi/265752" target="_blank">羌人谷</a>#}
+                        </div>
+                        <div class="date">2015-09-03</div>
+{#                        <div class="view-count">·&nbsp;13个回应&nbsp;·&nbsp;26141次浏览</div>#}
+                    </div>
+                </div>
+            </div>
+            <div class="quarkButtons">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 quark quark-4-1">
+
+
+        <div class="quark-inner ">
+            <a href="/gallery/detail/7" target="_blank" class="cover quark-link loaded"
+               data-quark-id="10131211133200002539"
+               data-src="/gallery/static/img/2015seda/1.jpg"
+               style="overflow: hidden; z-index: 0; background: transparent;">
+
+                <!-- image will be injected here -->
+                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/248654/20131211/1300297469a32cce240e.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+            </a>
+            <span class="border-below"></span>
+
+            <div class="quarkText">
+                <div class="quarkTextInner">
+                    <a href="/gallery/detail/7" target="_blank" class="title2 quark-link"
+                       data-quark-id="10131211133200002539">
+                        <span class="title-text">色达·探寻伏藏</span>
+                    </a>
+
+                    <div class="bylineWrapper">
+                        <div class="byline">
+                            <a href="/gallery/detail/6" class="author" target="_blank">蟹小月</a>
+                            &nbsp;
+{#                            <a href="http://www.hualvtu.com/dest/22419" target="_blank">银川</a>#}
+                        </div>
+                        <div class="date">2015-07-10</div>
+{#                        <div class="view-count">·&nbsp;23个回应&nbsp;·&nbsp;24993次浏览</div>#}
+                    </div>
+                </div>
+            </div>
+            <div class="quarkButtons">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 quark quark-4-3">
+
+
+        <div class="quark-inner ">
+            <a href="/gallery/detail/9" target="_blank" class="cover quark-link loaded"
+               data-quark-id="10131019091200000277"
+               data-src="/gallery/static/img/2015eqina/1.jpg"
+               style="overflow: hidden; z-index: 0; background: transparent;">
+
+                <!-- image will be injected here -->
+                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/254400/20131019/09027f96b4f9aec5d419.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>
+            </a>
+            <span class="border-below"></span>
+
+            <div class="quarkText">
+                <div class="quarkTextInner">
+                    <a href="/gallery/detail/9" target="_blank" class="title2 quark-link"
+                       data-quark-id="10131019091200000277">
+                        <span class="title-text">额济纳·千年的等待</span>
+                    </a>
+
+                    <div class="bylineWrapper">
+                        <div class="byline">
+                            <a href="/gallery/detail/9" class="author" target="_blank">蟹小月</a>
+                            &nbsp;
+{#                            <a href="http://www.hualvtu.com/dest/59073" target="_blank">奈良</a>#}
+                        </div>
+                        <div class="date">2015-10-01</div>
+{#                        <div class="view-count">·&nbsp;23个回应&nbsp;·&nbsp;13489次浏览</div>#}
+                    </div>
+                </div>
+            </div>
+            <div class="quarkButtons">
+            </div>
+        </div>
+    </div>
+    <span class="ln ln-4"></span>
+</div>
+
+
+{#<div class="row row-quark">#}
+{#    <div class="col-md-6 quark quark-3-0">#}
+{##}
+{##}
+{#        <div class="quark-inner ">#}
+{#            <a href="http://gaonseven.hualvtu.com/10130630222700001569" target="_blank" class="cover quark-link loaded"#}
+{#               data-quark-id="10130630222700001569"#}
+{#               data-src="http://img3A.hualvtu.com/71297/20130630/2211d7eca4fab2c09d84.jpg!800"#}
+{#               style="overflow: hidden; z-index: 0; background: transparent;">#}
+{##}
+{#                <!-- image will be injected here -->#}
+{#                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/71297/20130630/2211d7eca4fab2c09d84.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>#}
+{#            </a>#}
+{#            <span class="border-below"></span>#}
+{##}
+{#            <div class="quarkText">#}
+{#                <div class="quarkTextInner">#}
+{#                    <a href="http://gaonseven.hualvtu.com/10130630222700001569" target="_blank"#}
+{#                       class="title2 quark-link" data-quark-id="10130630222700001569">#}
+{#                        <span class="title-text">新西兰南岛自驾 Day 5</span>#}
+{#                    </a>#}
+{##}
+{#                    <div class="bylineWrapper">#}
+{#                        <div class="byline">#}
+{#                            <a href="http://gaonseven.hualvtu.com/" class="author" target="_blank">gaonseven</a>#}
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/57443" target="_blank">皇后镇</a>#}
+{#                        </div>#}
+{#                        <div class="date">2012-12-19</div>#}
+{#                        <div class="view-count">·&nbsp;25个回应&nbsp;·&nbsp;16,386次浏览</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="quarkButtons">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="col-md-6 quark quark-3-2">#}
+{##}
+{##}
+{#        <div class="quark-inner ">#}
+{#            <a href="http://yoyito.hualvtu.com/10130829155900002766" target="_blank" class="cover quark-link loaded"#}
+{#               data-quark-id="10130829155900002766"#}
+{#               data-src="http://img3A.hualvtu.com/87416/20130829/1537213c7e2847c42437.jpg!800"#}
+{#               style="overflow: hidden; z-index: 0; background: transparent;">#}
+{##}
+{#                <!-- image will be injected here -->#}
+{#                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/87416/20130829/1537213c7e2847c42437.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>#}
+{#            </a>#}
+{#            <span class="border-below"></span>#}
+{##}
+{#            <div class="quarkText">#}
+{#                <div class="quarkTextInner">#}
+{#                    <a href="http://yoyito.hualvtu.com/10130829155900002766" target="_blank" class="title2 quark-link"#}
+{#                       data-quark-id="10130829155900002766">#}
+{#                        <span class="title-text">2013夏：波尔图</span>#}
+{#                    </a>#}
+{##}
+{#                    <div class="bylineWrapper">#}
+{#                        <div class="byline">#}
+{#                            <a href="http://yoyito.hualvtu.com/" class="author" target="_blank">yoyito</a>#}
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/54980" target="_blank">波尔多</a>#}
+{#                        </div>#}
+{#                        <div class="date">2013-08-29</div>#}
+{#                        <div class="view-count">·&nbsp;28个回应&nbsp;·&nbsp;49,781次浏览</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="quarkButtons">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="col-md-6 quark quark-3-1">#}
+{##}
+{##}
+{#        <div class="quark-inner ">#}
+{#            <a href="http://bridget.hualvtu.com/10130529135100000595" target="_blank" class="cover quark-link loaded"#}
+{#               data-quark-id="10130529135100000595"#}
+{#               data-src="http://img3A.hualvtu.com/59537/20130528/13153ee7b39165149c00.jpg!800"#}
+{#               style="overflow: hidden; z-index: 0; background: transparent;">#}
+{##}
+{#                <!-- image will be injected here -->#}
+{#                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/59537/20130528/13153ee7b39165149c00.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>#}
+{#            </a>#}
+{#            <span class="border-below"></span>#}
+{##}
+{#            <div class="quarkText">#}
+{#                <div class="quarkTextInner">#}
+{#                    <a href="http://bridget.hualvtu.com/10130529135100000595" target="_blank" class="title2 quark-link"#}
+{#                       data-quark-id="10130529135100000595">#}
+{#                        <span class="title-text">清 水 寺</span>#}
+{#                    </a>#}
+{##}
+{#                    <div class="bylineWrapper">#}
+{#                        <div class="byline">#}
+{#                            <a href="http://bridget.hualvtu.com/" class="author" target="_blank">bridget</a>#}
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/55964" target="_blank">京都</a>&nbsp;·&nbsp;<a#}
+{#                                href="http://www.hualvtu.com/poi/55966" target="_blank">清水寺</a>#}
+{#                        </div>#}
+{#                        <div class="date">2013-05-28</div>#}
+{#                        <div class="view-count">·&nbsp;32个回应&nbsp;·&nbsp;100,920次浏览</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="quarkButtons">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <span class="ln ln-3"></span>#}
+{#</div>#}
+{#<div class="row row-quark">#}
+{#    <div class="col-md-4 quark quark-2-0">#}
+{##}
+{##}
+{#        <div class="quark-inner ">#}
+{#            <a href="http://chenfollow.hualvtu.com/10130829211600003053" target="_blank" class="cover quark-link loaded"#}
+{#               data-quark-id="10130829211600003053"#}
+{#               data-src="http://img3A.hualvtu.com/262532/20130829/2051637f420cddafd229.jpg!800"#}
+{#               style="overflow: hidden; z-index: 0; background: transparent;">#}
+{##}
+{#                <!-- image will be injected here -->#}
+{#                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/262532/20130829/2051637f420cddafd229.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>#}
+{#            </a>#}
+{#            <span class="border-below"></span>#}
+{##}
+{#            <div class="quarkText">#}
+{#                <div class="quarkTextInner">#}
+{#                    <a href="http://chenfollow.hualvtu.com/10130829211600003053" target="_blank"#}
+{#                       class="title2 quark-link" data-quark-id="10130829211600003053">#}
+{#                        <span class="title-text">【在那遥远的地方】青海湖 - 茶卡盐湖 - 倒淌河 - 日月山 - 金银滩  </span>#}
+{#                    </a>#}
+{##}
+{#                    <div class="bylineWrapper">#}
+{#                        <div class="byline">#}
+{#                            <a href="http://chenfollow.hualvtu.com/" class="author" target="_blank">chenfollow</a>#}
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/21238" target="_blank">青海湖</a>#}
+{#                        </div>#}
+{#                        <div class="date">2013-06-10</div>#}
+{#                        <div class="view-count">·&nbsp;22个回应&nbsp;·&nbsp;71,611次浏览</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="quarkButtons">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="col-md-8 quark quark-2-1">#}
+{##}
+{##}
+{#        <div class="quark-inner ">#}
+{#            <a href="http://liuyuhao.hualvtu.com/10130913141300000268" target="_blank" class="cover quark-link loaded"#}
+{#               data-quark-id="10130913141300000268"#}
+{#               data-src="http://img3A.hualvtu.com/252909/20130913/140772e783e8635ea88b.jpg!800"#}
+{#               style="overflow: hidden; z-index: 0; background: transparent;">#}
+{##}
+{#                <!-- image will be injected here -->#}
+{#                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/252909/20130913/140772e783e8635ea88b.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>#}
+{#            </a>#}
+{#            <span class="border-below"></span>#}
+{##}
+{#            <div class="quarkText">#}
+{#                <div class="quarkTextInner">#}
+{#                    <a href="http://liuyuhao.hualvtu.com/10130913141300000268" target="_blank" class="title2 quark-link"#}
+{#                       data-quark-id="10130913141300000268">#}
+{#                        <span class="title-text">夏末时节  行在成都</span>#}
+{#                    </a>#}
+{##}
+{#                    <div class="bylineWrapper">#}
+{#                        <div class="byline">#}
+{#                            <a href="http://liuyuhao.hualvtu.com/" class="author" target="_blank">liuyuhao</a>#}
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/10458" target="_blank">成都</a>#}
+{#                        </div>#}
+{#                        <div class="date">2013-09-13</div>#}
+{#                        <div class="view-count">·&nbsp;39个回应&nbsp;·&nbsp;142,345次浏览</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="quarkButtons">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <span class="ln ln-2"></span>#}
+{#</div>#}
+{#<div class="row row-quark">#}
+{#    <div class="col-md-6 quark quark-3-0">#}
+{##}
+{##}
+{#        <div class="quark-inner ">#}
+{#            <a href="http://sallycheung.hualvtu.com/10130416135100001472" target="_blank"#}
+{#               class="cover quark-link loaded" data-quark-id="10130416135100001472"#}
+{#               data-src="http://img3A.hualvtu.com/248199/20130416/1351bab1b595f606400c.jpg!800"#}
+{#               style="overflow: hidden; z-index: 0; background: transparent;">#}
+{##}
+{#                <!-- image will be injected here -->#}
+{#                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/248199/20130416/1351bab1b595f606400c.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>#}
+{#            </a>#}
+{#            <span class="border-below"></span>#}
+{##}
+{#            <div class="quarkText">#}
+{#                <div class="quarkTextInner">#}
+{#                    <a href="http://sallycheung.hualvtu.com/10130416135100001472" target="_blank"#}
+{#                       class="title2 quark-link" data-quark-id="10130416135100001472">#}
+{#                        <span class="title-text">Melbourne</span>#}
+{#                    </a>#}
+{##}
+{#                    <div class="bylineWrapper">#}
+{#                        <div class="byline">#}
+{#                            <a href="http://sallycheung.hualvtu.com/" class="author" target="_blank">sallycheung</a>#}
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/57507" target="_blank">墨尔本</a>#}
+{#                        </div>#}
+{#                        <div class="date">2012-10-09</div>#}
+{#                        <div class="view-count">·&nbsp;12个回应&nbsp;·&nbsp;80,431次浏览</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="quarkButtons">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="col-md-6 quark quark-3-2">#}
+{##}
+{##}
+{#        <div class="quark-inner ">#}
+{#            <a href="http://alphabear.hualvtu.com/10130826231500001089" target="_blank" class="cover quark-link loaded"#}
+{#               data-quark-id="10130826231500001089"#}
+{#               data-src="http://img3A.hualvtu.com/230326/20130826/03315c4b4aca4fef5474.jpg!800"#}
+{#               style="overflow: hidden; z-index: 0; background: transparent;">#}
+{##}
+{#                <!-- image will be injected here -->#}
+{#                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/230326/20130826/03315c4b4aca4fef5474.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>#}
+{#            </a>#}
+{#            <span class="border-below"></span>#}
+{##}
+{#            <div class="quarkText">#}
+{#                <div class="quarkTextInner">#}
+{#                    <a href="http://alphabear.hualvtu.com/10130826231500001089" target="_blank"#}
+{#                       class="title2 quark-link" data-quark-id="10130826231500001089">#}
+{#                        <span class="title-text">錫蘭·在Anuradhapura，要身穿素白崇拜佛祖</span>#}
+{#                    </a>#}
+{##}
+{#                    <div class="bylineWrapper">#}
+{#                        <div class="byline">#}
+{#                            <a href="http://alphabear.hualvtu.com/" class="author" target="_blank">alphabear</a>#}
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/58931" target="_blank">阿努拉德普勒</a>#}
+{#                        </div>#}
+{#                        <div class="date">2013-05-26</div>#}
+{#                        <div class="view-count">·&nbsp;60个回应&nbsp;·&nbsp;97,578次浏览</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="quarkButtons">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="col-md-6 quark quark-3-1">#}
+{##}
+{##}
+{#        <div class="quark-inner ">#}
+{#            <a href="http://gustas.hualvtu.com/10130827164600001680" target="_blank" class="cover quark-link loaded"#}
+{#               data-quark-id="10130827164600001680"#}
+{#               data-src="http://img3A.hualvtu.com/117114/20130827/15191830d570947c7134.jpg!800"#}
+{#               style="overflow: hidden; z-index: 0; background: transparent;">#}
+{##}
+{#                <!-- image will be injected here -->#}
+{#                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/117114/20130827/15191830d570947c7134.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>#}
+{#            </a>#}
+{#            <span class="border-below"></span>#}
+{##}
+{#            <div class="quarkText">#}
+{#                <div class="quarkTextInner">#}
+{#                    <a href="http://gustas.hualvtu.com/10130827164600001680" target="_blank" class="title2 quark-link"#}
+{#                       data-quark-id="10130827164600001680">#}
+{#                        <span class="title-text">心心念念的岛 - （贰） </span>#}
+{#                    </a>#}
+{##}
+{#                    <div class="bylineWrapper">#}
+{#                        <div class="byline">#}
+{#                            <a href="http://gustas.hualvtu.com/" class="author" target="_blank">gustas</a>#}
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/13296" target="_blank">厦门</a>&nbsp;·&nbsp;<a#}
+{#                                href="http://www.hualvtu.com/poi/13972" target="_blank">鼓浪屿</a>#}
+{#                        </div>#}
+{#                        <div class="date">2013-08-15</div>#}
+{#                        <div class="view-count">·&nbsp;8个回应&nbsp;·&nbsp;125,489次浏览</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="quarkButtons">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <span class="ln ln-3"></span>#}
+{#</div>#}
+{#<div class="row row-quark">#}
+{#    <div class="col-md-4 quark quark-2-0">#}
+{##}
+{##}
+{#        <div class="quark-inner ">#}
+{#            <a href="http://wade19861127.hualvtu.com/10130817111700000162" target="_blank"#}
+{#               class="cover quark-link loaded" data-quark-id="10130817111700000162"#}
+{#               data-src="http://img3A.hualvtu.com/113304/20130817/1117f328d4e1a9d9bf80.jpg!800"#}
+{#               style="overflow: hidden; z-index: 0; background: transparent;">#}
+{##}
+{#                <!-- image will be injected here -->#}
+{#                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/113304/20130817/1117f328d4e1a9d9bf80.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>#}
+{#            </a>#}
+{#            <span class="border-below"></span>#}
+{##}
+{#            <div class="quarkText">#}
+{#                <div class="quarkTextInner">#}
+{#                    <a href="http://wade19861127.hualvtu.com/10130817111700000162" target="_blank"#}
+{#                       class="title2 quark-link" data-quark-id="10130817111700000162">#}
+{#                        <span class="title-text">列城</span>#}
+{#                    </a>#}
+{##}
+{#                    <div class="bylineWrapper">#}
+{#                        <div class="byline">#}
+{#                            <a href="http://wade19861127.hualvtu.com/" class="author" target="_blank">wade19861127</a>#}
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/261672" target="_blank">列城</a>#}
+{#                        </div>#}
+{#                        <div class="date">2013-08-17</div>#}
+{#                        <div class="view-count">·&nbsp;19个回应&nbsp;·&nbsp;64,727次浏览</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="quarkButtons">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="col-md-8 quark quark-2-1">#}
+{##}
+{##}
+{#        <div class="quark-inner ">#}
+{#            <a href="http://hydepark628.hualvtu.com/10131229173100010066" target="_blank"#}
+{#               class="cover quark-link loaded" data-quark-id="10131229173100010066"#}
+{#               data-src="http://img3A.hualvtu.com/72431/20131229/1723f5a5fe5bf938baf0.jpg!800"#}
+{#               style="overflow: hidden; z-index: 0; background: transparent;">#}
+{##}
+{#                <!-- image will be injected here -->#}
+{#                <div style="left: 0px; top: 0px; position: absolute; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 100%; width: 100%; background-image: url(http://img3a.hualvtu.com/72431/20131229/1723f5a5fe5bf938baf0.jpg!800); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div>#}
+{#            </a>#}
+{#            <span class="border-below"></span>#}
+{##}
+{#            <div class="quarkText">#}
+{#                <div class="quarkTextInner">#}
+{#                    <a href="http://hydepark628.hualvtu.com/10131229173100010066" target="_blank"#}
+{#                       class="title2 quark-link" data-quark-id="10131229173100010066">#}
+{#                        <span class="title-text">黄埔军校</span>#}
+{#                    </a>#}
+{##}
+{#                    <div class="bylineWrapper">#}
+{#                        <div class="byline">#}
+{#                            <a href="http://hydepark628.hualvtu.com/" class="author" target="_blank">hydepark628</a>#}
+{#                            &nbsp;#}
+{#                            <a href="http://www.hualvtu.com/dest/4478" target="_blank">广州</a>&nbsp;·&nbsp;<a#}
+{#                                href="http://www.hualvtu.com/poi/5796" target="_blank">黄埔军校旧址</a>#}
+{#                        </div>#}
+{#                        <div class="date">2013-12-19</div>#}
+{#                        <div class="view-count">·&nbsp;15个回应&nbsp;·&nbsp;79,915次浏览</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="quarkButtons">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <span class="ln ln-2"></span>#}
+{#</div>#}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(".foot").attr("last", '10131229173100010066');
+
+        $(".cover").not(".loaded").each(function () {
+            var photo = $(this).attr("data-src");
+            var cover = $(this);
+            cover.fillmore({src: photo, callback: function () {
+                cover.children(".loading").remove();
+            }});
+            cover.addClass("loaded");
+        });
+
+    });
+</script>
+</div>
+</div>
+<!-- /container -->
+
+<div class="container foot" more="true" last="10131229173100010066">
+    <div class="row">
+        <div class="col-md-3">&nbsp;</div>
+        <div class="col-md-6 foot-inner">
+            <p class="copyright"> ©
+                <span class="year">2015</span>
+            </p>
+
+            <p class="made">POWERED by <a href="http://www.womenqunar.com/" target="_blank">我们去哪儿</a></p>
+        </div>
+        <div class="col-md-3">&nbsp;</div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" async="" src="/gallery/static/js/ga.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/gallery/static/js/underscore.min.js"></script>
+
+
+
+<!-- Functional JavaScript
+================================================== -->
+<!-- script src="http://cdn.hualvtu.com/bootstrap2/js/holder.js"></script-->
+<script src="/gallery/static/js/jquery.fillmore.min.js"></script>
+<script src="/gallery/static/js/destination.js"></script>
+<script src="/gallery/static/js/common.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Fillmore
+        $(".thumbnail, .cover").not("loaded").each(function () {
+            var photo = $(this).attr("data-src");
+            var cover = $(this);
+            cover.fillmore({src: photo, callback: function () {
+                cover.children(".loading").remove();
+            }});
+            cover.addClass("loaded");
+        });
+
+        // Install map
+        $(".labels a").hover(function () {
+            var name = $(this).text();
+            showPopover($(this));
+        });
+
+        $("#map img").load(function () {
+            $(this).css("left", 0);
+            $("#map .labels").css("left", 0);
+            var w1 = $(this).parent().width();
+            var w2 = $(this).width();
+            if (w1 > w2) {
+                var offset = (w1 - w2) / 2;
+                $(this).css("left", offset);
+                $("#map .labels").css("left", offset);
+            }
+        });
+
+        $("#map-nav a").click(function () {
+            $(".popover").remove();
+            $("#map-nav li").removeClass("active");
+            $("#map .labels").hide();
+            $(this).parent().addClass("active");
+            var area = $(this).attr("area");
+            $("#map img").attr("src", 'http://cdn.hualvtu.com/bootstrap2/img/' + area + '.png');
+            $("#map #" + area + "-labels").show();
+        });
+
+        // load more
+        $(".foot").bind("enterviewport", loadMoreQuarks).bullseye();
+    });
+
+    function showPopover(btn) {
+        $(".popover").remove();
+        var left = btn.offset().left + btn.width() + 5;
+        //
+        var lst = [];
+        if (btn.parent().attr("id").indexOf("china-") >= 0) {
+            lst = pMap[btn.attr("areaid")];
+        } else {
+            lst = cMap[btn.attr("areaid")];
+        }
+        var content = "";
+        $.each(lst, function (i, n) {
+            if (i >= 10) return false;
+            content += "<a href='http://www.hualvtu.com/dest/" + n.id + "' target='_blank'>" + n.name + "</a>&nbsp;&nbsp;&nbsp;";
+        });
+
+        var param = {position: "right", top: 0, left: left, title: "<strong>" + btn.text() + "</strong>下的目的地", content: content};
+        var template = $("#popover").html();
+        var popover = $(_.template(template, param)).appendTo("body");
+        var top = btn.offset().top + btn.height() / 2 - popover.height() / 2;
+        popover.css("top", top);
+        $(".popover").show();
+    }
+
+    var loadingQuarks = false;
+    function loadMoreQuarks() {
+        if ($(".foot").attr("more") == "false") return;
+        if (loadingQuarks) return;
+        loadingQuarks = true;
+        var loading = $('<div class="loading"/>');
+        loading.insertBefore(".foot");
+        var last = $(".foot").attr("last");
+        $.get('/loadMoreQuarks4.action', {
+                    'did': 'TOP',
+                    'last': last,
+                    'r': Math.random()},
+                function (result) {
+                    $("#quarks").append(result);
+                    loading.remove();
+                    loadingQuarks = false;
+                }, 'html');
+    }
+</script>
+
+<script type="foo/bar" id="popover">
+			<div class="popover fade <%= position %> in" style="top: <%= top %>px; left: <%= left %>px; display: none;"><div class="arrow"></div><h3 class="popover-title" style="background-color:#ccc;"><%= title %><button class="close" type="button" onclick='$(".popover").remove();'>×</button></h3><div class="popover-content"><%= content %></div></div>
+
+</script>
+
+<div id="message-modal" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3 id="message-modal-label"></h3>
+    </div>
+    <div class="modal-body">
+
+    </div>
+    <div class="modal-footer">
+        <a href="http://www.hualvtu.com/s/viewMessage2.action" target="_blank" class="btn pull-left"
+           style="display: none" id="view-more-message">查看更多</a>
+        <button class="btn" data-dismiss="modal">关闭</button>
+        <button class="btn btn-success" onclick="markread();">我知道了</button>
+    </div>
+</div>
+
+</body></html>

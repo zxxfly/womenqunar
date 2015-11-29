@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+__pycache__
+hualvtu/__pycache__
+gallery/__pycache__
+media
+db.sqlite3
+gallery/.DS_Store
+
