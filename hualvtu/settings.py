@@ -97,7 +97,6 @@ STATIC_DIRS=(
     "/static/fonts",
     "/static/img",
     "/gallery/static/js",
-    "/gallery/static/img",
     "/gallery/static/css",
 )
 
@@ -107,5 +106,10 @@ TEMPLATE_DIRS = (
 )
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 GALLERY_STATIC = os.path.join(BASE_DIR, '/gallery/static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_DIRS=(
+    "/media/gallery/img",
+)

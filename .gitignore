@@ -6,4 +6,7 @@ gallery/__pycache__
 media
 db.sqlite3
 gallery/.DS_Store
+static/img/gallery/
+gallery/*.pyc
+hualvtu/*.pyc
 
